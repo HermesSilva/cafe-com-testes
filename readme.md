@@ -16,6 +16,8 @@ Status do repositório
     <td>.Net Core</td>
     <td>8.0</td>
     <td>
+	<a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a>, 
+	
     <a href="https://xunit.net/">xUnit</a>, 
     <a href="https://fluentvalidation.net">FluentValidation</a>, 
   </tr>
@@ -60,7 +62,7 @@ Status do repositório
     <td><img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://icongr.am/devicon/git-original.svg?size=40"></td>
     <td>Git</td>
     <td>lasted</td>
-    <td><a href="https://git-scm.com/downloads">Github Flow</a></td>    
+    <td><a href="https://git-scm.com/downloads">Git</a></td>    
   </tr>  
   <tr>
     <td><img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://icongr.am/devicon/docker-original.svg?size=40"></td>
