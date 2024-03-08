@@ -42,7 +42,7 @@ export class AppComponent
   onChangeMeses(pEvent: any)
   {
     let vlr = pEvent.currentTarget.value;
-    if (vlr <= 1 || vlr > 750)
+    if (vlr <= 0 || vlr > 750)
     {
       alert('O campo "Meses de Depósito" deve ter valor entre "1" e "750".');
       return;
@@ -52,6 +52,12 @@ export class AppComponent
 
   resgatar(pEvent: any)
   {
+    if (this.entrada.Meses <= 1)
+    {
+      alert('O campo "Meses de Depósito" deve ter valor entre "1" e "750".');
+      return;
+    }
+
     let self = this;
     let ret = this.http.post<CdbEntrada>('https://localhost:33002/Cdb/Calcular', this.entrada);
     ret.forEach((data: any) =>
