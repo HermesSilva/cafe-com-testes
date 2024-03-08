@@ -17,9 +17,8 @@ Status do repositório
     <td>8.0</td>
     <td>
 	<a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET 8.0</a>, 
-	
     <a href="https://xunit.net/">xUnit</a>, 
-    <a href="https://fluentvalidation.net">FluentValidation</a>, 
+    <a href="https://fluentvalidation.net">FluentValidation</a> </td>
   </tr>
   <tr>
     <td><img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://icongr.am/devicon/csharp-original.svg?size=40"></td>
