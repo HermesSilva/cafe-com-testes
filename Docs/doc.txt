@@ -1,3 +1,8 @@
-Cálculo Explicado
+.NET 8.0
+https://dotnet.microsoft.com/en-us/download
 
+Cálculo Explicado
 https://paranabancoinvestimentos.com.br/blog/como-calcular-a-rentabilidade-de-cdb/
+
+GitEmojis
+https://gitmoji.dev/

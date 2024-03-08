@@ -78,25 +78,33 @@ Este repositório contem os arquivo que envolvem o projeto para calcular o resgat
 ## Instalação do projeto e configuração do ambiente:
 
 1. Clonar o repositório:
+   
    `
    git clone https://github.com/HermesSilva/ResgateCDB.git
    `
 
 2. Entrar no diretório criado:
+   
    `
    cd ResgateCDB
    `
 
 4. Executar Testes
+   
    `
    dotnet test ResgateCDB.sln
    `
+
 5. Executar Cliente em Angular
+   
    `
    StartClient
    `
+
 5. Executar Servidor C#, WebAPI
+   
    `
    StartServer
    `
-   
+
+A execução mostrada aqui é em compilação Debug, portanto o Swagger estará disponível para testar a API
