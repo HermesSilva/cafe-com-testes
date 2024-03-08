@@ -111,4 +111,4 @@ Status do repositório
    StartServer
    `
 
-A execução mostrada aqui é em compilação Debug, portanto o Swagger estará disponível para testar a API
+A client em Angular, não está preparado para ser acessa de uma URL diferente de LOCALHOST
