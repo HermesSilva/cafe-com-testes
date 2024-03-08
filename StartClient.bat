@@ -1,6 +1,10 @@
 cd resgatecdb.client
 
 if exist node_modules\@angular goto start
+
+npm install -g @angular/cli
+if errorlevel 1 goto error
+
 cmd /c npm install
 if errorlevel 1 goto error
 

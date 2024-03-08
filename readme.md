@@ -60,7 +60,7 @@ Status do repositório
     <td><img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://icongr.am/devicon/git-original.svg?size=40"></td>
     <td>Git</td>
     <td>lasted</td>
-    <td><a href="https://docs.github.com/pt/get-started/quickstart/github-flow">Github Flow</a></td>    
+    <td><a href="https://git-scm.com/downloads">Github Flow</a></td>    
   </tr>  
   <tr>
     <td><img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://icongr.am/devicon/docker-original.svg?size=40"></td>
