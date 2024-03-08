@@ -63,12 +63,6 @@ Status do repositório
     <td>lasted</td>
     <td><a href="https://git-scm.com/downloads">Git</a></td>    
   </tr>  
-  <tr>
-    <td><img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://icongr.am/devicon/docker-original.svg?size=40"></td>
-    <td><a">Docker</a></td>
-    <td>lasted</td>
-    <td><a href="https://docs.docker.com">Docker</a></td>    
-  </tr>
 </table>
 
 ## Pré-requisitos para a instalação do projeto:
@@ -76,8 +70,6 @@ Status do repositório
 + Angular v12
 + NET 8.0
 + Git
-+ Docker
-+ Docker-compose
 
 ## Instalação do projeto e configuração do ambiente:
 
