@@ -14,19 +14,19 @@ namespace WebAPI
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddMvc().AddJsonOptions(options => { options.JsonSerializerOptions.PropertyNamingPolicy = null; });
-#if DEBUG
+            // #if DEBUG
             builder.Services.AddSwaggerGen();
-#endif
+            // #endif
             builder.Services.Configure();
 
             var app = builder.Build();
-#if DEBUG
+            // #if DEBUG
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-#endif
+            // #endif
             app.Urls.Add("http://localhost:33001/");
             app.Urls.Add("https://localhost:33002/");
             app.UseHttpsRedirection();
