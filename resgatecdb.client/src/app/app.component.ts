@@ -12,6 +12,7 @@ class CdbResultado
   ValorResgate: number = 0;
   RendimentoBruto: number = 0;
   RendimentoLiquido: number = 0;
+  ValorTotal: number = 0;
 }
 
 @Component({
@@ -28,12 +29,25 @@ export class AppComponent
 
   onChangeValor(pEvent: any)
   {
-    this.entrada.Valor = pEvent.currentTarget.value;
+    let vlr = pEvent.currentTarget.value;
+    if (vlr < 0 || vlr > 100000000)
+    {
+      alert('O campo "Valor Original a Resgatar" deve ter valor entre "1" e "100.000.000,00".');
+      return;
+    }
+    this.entrada.Valor = vlr;
+
   }
 
   onChangeMeses(pEvent: any)
   {
-    this.entrada.Meses = pEvent.currentTarget.value;
+    let vlr = pEvent.currentTarget.value;
+    if (vlr < 0 || vlr > 750)
+    {
+      alert('O campo "Meses de Depósito" deve ter valor entre "1" e "750".');
+      return;
+    }
+    this.entrada.Meses = vlr;
   }
 
   resgatar(pEvent: any)
@@ -43,6 +57,7 @@ export class AppComponent
     ret.forEach((data: any) =>
     {
       self.resgate = data;
+      self.resgate.ValorTotal = self.resgate.ValorResgate + self.resgate.RendimentoLiquido;
     }).catch((e) =>
     {
       if (e.error)

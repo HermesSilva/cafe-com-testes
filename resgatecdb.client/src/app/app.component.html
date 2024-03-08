@@ -3,22 +3,24 @@
 <br />
 <br />
 <div>
-  <table>
-    <thead>
-      <tr>
-        <th>Valor Original a Resgatar</th>
-        <th>Meses de Depósito</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><input class="form-control"  type="number" (input)="onChangeValor($event)"  ng-pattern="/^-?[0-9]*$/"/></td>
-        <td><input class="form-control"  type="number" (input)="onChangeMeses($event)"  ng-pattern="/^-?[0-9][^\,]*$/"/></td>
-        <td><button (click)='resgatar($event)'>Resgatar</button> </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="form-group">
+    <table>
+      <thead>
+        <tr>
+          <th>Valor Original a Resgatar</th>
+          <th>Meses de Depósito</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" type="number" (input)="onChangeValor($event)" ng-pattern="/^-?[0-9]*$/" required /></td>
+          <td><input class="form-control" type="number" (input)="onChangeMeses($event)" ng-pattern="/^-?[0-9][^\,]*$/" required /></td>
+          <td><button (click)='resgatar($event)'>Resgatar</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 <br />
 <br />
@@ -31,13 +33,15 @@
       <th>Valor Original Resgatado</th>
       <th>Redimento Bruto</th>
       <th>Rendimento Liquido</th>
+      <th>Valor Total Liquido</th>
     </tr>
   </thead>
   <tbody>
-    <tr >
-      <td>{{ resgate.ValorResgate }}</td>
-      <td>{{ resgate.RendimentoBruto }}</td>
-      <td>{{ resgate.RendimentoLiquido }}</td>
+    <tr>
+      <td>{{ resgate.ValorResgate | currency : "R$ " }}</td>
+      <td>{{ resgate.RendimentoBruto | currency : "R$ " }}</td>
+      <td>{{ resgate.RendimentoLiquido | currency : "R$ " }}</td>
+      <td>{{ resgate.ValorTotal | currency : "R$ " }}</td>
     </tr>
   </tbody>
 </table>

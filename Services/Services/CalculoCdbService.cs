@@ -63,7 +63,7 @@ namespace Services.Services
                 var cdi = _Cache.GetCDI(ini.Month, ini.Year);
                 var tb = _Cache.GetTB(ini.Month, ini.Year);
                 vi *= (1 + (cdi / 100 * tb / 100));
-                ini = ini.AddMonths(i);
+                ini = ini.AddMonths(1);
             }
             var ir = _Cache.GetIR(pPars.Meses) / 100;
             ret.RendimentoBruto = vi - pPars.Valor;

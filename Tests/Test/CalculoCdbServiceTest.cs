@@ -16,27 +16,29 @@ namespace Test
         [Theory]
         [InlineData(1, 20000, 194.40, 150.66)]
         [InlineData(2, 20000, 390.689568, 302.7844152)]
-        public void CalcularSimples_Should_Ok(int pMeses, decimal pValor, decimal pValorBruto, decimal pValorLiquido)
+        [InlineData(750, 20000, 28277558.14612243, 24035924.424204063)]
+        public void CalcularSimples_Should_Ok(int pMeses, decimal pValor, Double pValorBruto, Double pValorLiquido)
         {
             var svc = new CalculoCdbService();
             svc.SetCache(new DataCache());
             var par = new CdbEntrada { Valor = pValor, Meses = pMeses };
             var ret = svc.CalcularSimples(par);
-            Assert.Equal(pValorBruto, ret.RendimentoBruto);
-            Assert.Equal(pValorLiquido, ret.RendimentoLiquido);
+            Assert.Equal(pValorBruto, (Double)ret.RendimentoBruto);
+            Assert.Equal(pValorLiquido, (Double)ret.RendimentoLiquido);
         }
 
         [Theory]
         [InlineData(1, 20000, 194.40, 150.66)]
         [InlineData(2, 20000, 390.689568, 302.7844152)]
-        public void Calcular_Should_Ok(int pMeses, decimal pValor, decimal pValorBruto, decimal pValorLiquido)
+        [InlineData(750, 20000, 28277558.14612243, 24035924.424204063)]
+        public void Calcular_Should_Ok(int pMeses, decimal pValor, Double pValorBruto, Double pValorLiquido)
         {
             var svc = new CalculoCdbService();
             svc.SetCache(new DataCache());
             var par = new CdbEntrada { Valor = pValor, Meses = pMeses };
             var ret = svc.Calcular(par);
-            Assert.Equal(pValorBruto, ret.RendimentoBruto);
-            Assert.Equal(pValorLiquido, ret.RendimentoLiquido);
+            Assert.Equal(pValorBruto, (Double)ret.RendimentoBruto);
+            Assert.Equal(pValorLiquido, (Double)ret.RendimentoLiquido);
         }
 
         [Theory]
