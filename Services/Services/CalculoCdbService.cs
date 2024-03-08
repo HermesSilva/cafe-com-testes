@@ -52,7 +52,7 @@ namespace Services.Services
                 throw new MyException(PARAM_NULL);
             if (pPars.Valor <= 0)
                 throw new MyException(VALOR_INVALIDO);
-            if (pPars.Meses <= 0)
+            if (pPars.Meses <= 1)
                 throw new MyException(MESES_INVALIDO);
 
             var ret = new CdbResultado();
@@ -83,7 +83,7 @@ namespace Services.Services
                 throw new MyException(PARAM_NULL);
             if (pPars.Valor <= 0)
                 throw new MyException(VALOR_INVALIDO);
-            if (pPars.Meses <= 0)
+            if (pPars.Meses <= 1)
                 throw new MyException(MESES_INVALIDO);
 
             var ret = new CdbResultado();

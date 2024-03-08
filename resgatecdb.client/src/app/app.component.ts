@@ -30,7 +30,7 @@ export class AppComponent
   onChangeValor(pEvent: any)
   {
     let vlr = pEvent.currentTarget.value;
-    if (vlr < 0 || vlr > 100000000)
+    if (vlr <= 0 || vlr > 100000000)
     {
       alert('O campo "Valor Original a Resgatar" deve ter valor entre "1" e "100.000.000,00".');
       return;
@@ -42,7 +42,7 @@ export class AppComponent
   onChangeMeses(pEvent: any)
   {
     let vlr = pEvent.currentTarget.value;
-    if (vlr < 0 || vlr > 750)
+    if (vlr <= 1 || vlr > 750)
     {
       alert('O campo "Meses de Depósito" deve ter valor entre "1" e "750".');
       return;

@@ -46,7 +46,7 @@ namespace WebAPI.Controllers
                 return BadRequest(CalculoCdbService.PARAM_NULL);
             if (pPars.Valor <= 0)
                 return BadRequest(CalculoCdbService.VALOR_INVALIDO);
-            if (pPars.Meses <= 0)
+            if (pPars.Meses <= 1)
                return BadRequest(CalculoCdbService.MESES_INVALIDO);
 
             return Ok(_Service.Calcular(pPars));

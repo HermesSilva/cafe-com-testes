@@ -14,7 +14,6 @@ namespace Test
     public class CalculoCdbServiceTest
     {
         [Theory]
-        [InlineData(1, 20000, 194.40, 150.66)]
         [InlineData(2, 20000, 390.689568, 302.7844152)]
         [InlineData(750, 20000, 28277558.14612243, 24035924.424204063)]
         public void CalcularSimples_Should_Ok(int pMeses, decimal pValor, Double pValorBruto, Double pValorLiquido)
@@ -28,7 +27,6 @@ namespace Test
         }
 
         [Theory]
-        [InlineData(1, 20000, 194.40, 150.66)]
         [InlineData(2, 20000, 390.689568, 302.7844152)]
         [InlineData(750, 20000, 28277558.14612243, 24035924.424204063)]
         public void Calcular_Should_Ok(int pMeses, decimal pValor, Double pValorBruto, Double pValorLiquido)
@@ -44,6 +42,7 @@ namespace Test
         [Theory]
         [InlineData(20, 0, CalculoCdbService.VALOR_INVALIDO)]
         [InlineData(0, 100, CalculoCdbService.MESES_INVALIDO)]
+        [InlineData(1, 100, CalculoCdbService.MESES_INVALIDO)]
         public void Calcular_Should_ParametrosInvalido(int pMeses, decimal pValor, string pMsg)
         {
             var svc = new CalculoCdbService();

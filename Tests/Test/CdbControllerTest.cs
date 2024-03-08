@@ -32,8 +32,8 @@ namespace Test
         private readonly ICalculoCdbService _Service;
 
         [Theory]
-        [InlineData(1, 20000, 194.40, 150.66)]
         [InlineData(2, 20000, 390.689568, 302.7844152)]
+        [InlineData(750, 20000, 28277558.14612243, 24035924.424204063)]
         public void Calcular_Shoud_Ok(int pMeses, decimal pValor, decimal pValorBruto, decimal pValorLiquido)
         {
             var target = CreateTarget();

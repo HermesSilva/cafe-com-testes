@@ -13,7 +13,7 @@ namespace Models
         /// </summary>
 
         [DefaultValue(0)]
-        [Range(1, 750, ErrorMessage = $"O valor deste campo deve estar entre 1 e 750")]
+        [Range(2, 750, ErrorMessage = $"O valor deste campo deve estar entre 1 e 750")]
         public int Meses { get; set; }
 
         /// <summary>
