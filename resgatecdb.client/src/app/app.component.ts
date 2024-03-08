@@ -25,6 +25,7 @@ export class AppComponent
   private entrada = new CdbEntrada();
   constructor(private http: HttpClient) { }
 
+
   onChangeValor(pEvent: any)
   {
     this.entrada.Valor = pEvent.currentTarget.value;

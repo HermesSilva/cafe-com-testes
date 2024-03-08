@@ -13,8 +13,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><input class="form-control" (input)="onChangeValor($event)"/></td>
-        <td><input class="form-control" (input)="onChangeMeses($event)"/></td>
+        <td><input class="form-control"  type="number" (input)="onChangeValor($event)"  ng-pattern="/^-?[0-9]*$/"/></td>
+        <td><input class="form-control"  type="number" (input)="onChangeMeses($event)"  ng-pattern="/^-?[0-9][^\,]*$/"/></td>
         <td><button (click)='resgatar($event)'>Resgatar</button> </td>
       </tr>
     </tbody>
